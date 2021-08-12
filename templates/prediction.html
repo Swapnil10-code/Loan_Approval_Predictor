@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insurance Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container-fluid p-0 main">
+        <div class="nav_bar pred_landing_section px-3">
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">
+                    <h3>Loan<span class="text-primary">Pred.</span></h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>               
+            </nav>
+
+            <div style="cursor: pointer;">
+                <h6 class="underline back font-italic text-primary text-center"><u>&#60;&#60;&nbsp;Back</u></h6>
+            </div>
+            
+            <div class="row flex-column m-5 align-items-center">
+                <div class="result mx-5 rounded border border-success w-50">
+                    {% if prediction_data -%}
+                    <div class="p-2 bg-success text-center text-light p-3 m-1">
+                        <h4>🎊🎊 Congratulations, your loan is approved. 🎊🎊</h4>
+                        <span>(As per predictions)</span>
+                    </div>
+                    {% else -%}
+                    <div class="p-2 bg-danger text-center text-light p-3 m-1">
+                        <h4> 😔 Sorry, your loan is not approved.</h4>
+                        <span>(As per predictions)</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="mt-4 mb-1">
+                    <h3 clas="text-center" style="font-family: 'Red Hat Display', sans-serif;"><u> Given Details</u></h3>
+                </div>
+            </div>
+            
+            <div class="row d-flex align-items-center justify-content-center info_array">
+                <div class="col-md-3 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[0] }}
+                    </h4>
+                    <p>Loan ID</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[1] }}
+                    </h4>
+                    <p>Gender</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[2] }}
+                    </h4>
+                    <p>Married</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[3] }}
+                    </h4>
+                    <p>Dependents</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[4] }}
+                    </h4>
+                    <p>Education</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[5] }}
+                    </h4>
+                    <p>Self Employed</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[6] }}
+                    </h4>
+                    <p>Applicant Income</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[7] }}
+                    </h4>
+                    <p>Co-Applicant Income</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[8] }}
+                    </h4>
+                    <p>Loan Amount</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[9] }}
+                    </h4>
+                    <p>Loan Amount Term</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[10] }}
+                    </h4>
+                    <p>Credit History</p>
+                </div>
+                <div class="col-md-2 p-3 d-flex flex-column col-12 align-items-center justify-content-center">
+                    <h4>
+                        {{ info_array[11] }}
+                    </h4>
+                    <p>Property Area</p>
+                </div>
+            </div>
+            <div class="p-4">
+                <h5 class="text-center thanks_message">Thanks for using LoanPred &#128077;.</h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.back').addEventListener('click' , ()=> {
+            history.back();
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

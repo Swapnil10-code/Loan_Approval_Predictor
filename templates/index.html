@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insurance Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+</head>
+
+<body>
+    <div class="container-fluid p-0 main">
+        <div class="nav_bar landing_section px-3">
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">
+                    <h3>Loan<span class="text-primary">Pred.</span></h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link text-primary" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/team">Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Front_section -->
+            <div class="row m-3 p-4">
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <img src="{{ url_for('static' , filename='rocket.png') }}" class="rocket_img">
+                        <br>
+                        <span class="main_text">
+                            Best Prediction for the <br> Financial Future
+                        </span>
+                        <br>
+                        <span class="small_text text-primary">
+                            We help you take the best Loan
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center illus">
+                    <div>
+                        <img src="{{ url_for('static' , filename='predict_illustration.svg' ) }}">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="upload_section" id="upload">
+            <div class="wrapper">
+                <div class="description">
+                    <div>
+                        <img src="{{ url_for('static' , filename='health-insurance.png')}}">
+                    </div>
+                    <div class="head">
+                        <h3>Predict your Loan status</h3>
+                    </div>
+                    <span>Magically predicts your loan status in seconds.</span>
+                </div>
+                <div class="form_area">
+                    <div>
+                        <form method="POST" action="/predict">
+                            <div class="form-row">
+                                <div class="form-group col-md-8">
+                                    <label for="inputLoanID">Loan ID</label>
+                                    <input type="text" class="form-control" id="inputLoanID" placeholder="Loan ID"
+                                        name="loan_id" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputGender">Gender</label>
+                                    <select id="inputGender" class="form-control" name="gender">
+                                        <option disabled selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputMarried">Married</label>
+                                    <select id="inputMarried" class="form-control" name="married">
+                                        <option selected disabled>Choose...</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputDependents">Dependents</label>
+                                    <select id="inputDependents" class="form-control" name="dependents">
+                                        <option selected disabled>Choose...</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEducation">Education</label>
+                                    <select id="inputEducation" class="form-control" name="education">
+                                        <option selected disabled>Choose...</option>
+                                        <option>Graduate</option>
+                                        <option>Not Graduate</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputSelf_Employed">Self Employed</label>
+                                    <select id="inputSelf_Employed" class="form-control" name="self_employed">
+                                        <option selected disabled>Choose...</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputApplicant_Income">Applicant Income</label>
+                                    <input type="number" class="form-control" id="inputApplicant_Income"
+                                        placeholder="Applicant Income" name="applicant_income" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputCoApplicant_Income">Co-Applicant Income</label>
+                                    <input type="number" class="form-control" id="inputCoApplicant_Income"
+                                        placeholder="Co-Applicant Income" name="co_applicant_income" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputLoan_Amount">Loan Amount</label>
+                                    <input type="number" class="form-control" id="inputLoan_Amount"
+                                        placeholder="Loan Amount" name="loan_amount" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputLoan_Amount_term">Loan Amount Term</label>
+                                    <input type="number" class="form-control" id="inputLoan_Amount_term"
+                                        placeholder="Loan Amount Term" name="loan_amount_term" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-8">
+                                    <label for="inputCredit_history">Credit History</label>
+                                    <select id="inputCredit_history" class="form-control" name="credit_history"
+                                        required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputProperty_Area">Property Area</label>
+                                    <select id="inputProperty_Area" class="form-control" name="property_area">
+                                        <option selected disabled>Choose...</option>
+                                        <option>Urban</option>
+                                        <option>Semi-Urban</option>
+                                        <option>Rural</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg text-center">Predict</button>
+                            <!-- {% if show_results -%}
+                                <span>Your loan is approved.</span>
+                            {% else -%}
+                                <span>Your loan is not approved.</span>
+                            {% endif %} -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

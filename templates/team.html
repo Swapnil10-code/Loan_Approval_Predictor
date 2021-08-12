@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loan Predictor - Team</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid p-0 main">
+        <div class="nav_bar landing_section_team px-3">
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">
+                    <h3>Loan<span class="text-primary">Pred.</span></h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="/team">Team <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="d-flex flex-column align-items-center justify-content-center team">
+                <div>
+                    <span class="main_text">
+                        <u>Team</u>
+                    </span>
+                </div>
+                <div>
+                    <div class="row d-flex align-items-center justify-content-center m-4">
+                        <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
+                            <img src="{{ url_for('static' , filename='eeshan_avatar.jpg') }}" class="avatar_img">
+                            <h4>Eeshan Paul</h4>
+                            <span>Jadhavpur University</span>
+                            <span> Kolkata (W.B)</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
+                            <img src="{{ url_for('static' , filename='tanish_ava.jpg') }}" class="avatar_img">
+                            <h4 class="text-center">Tanish Singh Chouhan</h4>
+                            <span>AITR</span>
+                            <span>Indore (M.P)</span>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
+                            <img src="{{ url_for('static' , filename='swapnil_ava.jpg') }}" class="avatar_img">
+                            <h4>Swapnil Ghatak</h4>
+                            <span>Jadhavpur University</span>
+                            <span> Kolkata (W.B)</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
+                            <img src="{{ url_for('static' , filename='tansh_ava.jpg') }}" class="avatar_img" alt="ujjawal">
+                            <h4>Ujjawal Kumar Jha</h4>
+                            <span>Jadhavpur University</span>
+                            <span> Kolkata (W.B)</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

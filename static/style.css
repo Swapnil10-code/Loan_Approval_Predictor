@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #D8FFFD;
+  background-image: url("./Sun-Tornado.svg");
+  background-size: cover;
+}
+
+nav li {
+  font-size: 17px;
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0px 5px;
+  font-weight: 700;
+}
+
+.undraw_svg {
+    width : 100%;
+    height: auto;
+}
+
+.landing_section {
+  min-height: 95vh;  
+  border-radius: 0px 0px 10% 10%;
+}
+
+.pred_landing_section {
+  min-height: 100vh;  
+  border-radius: 0px 0px 10% 10%;
+}
+
+.main_text {
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.small_text {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 30px 10px;
+}
+
+.rocket_img {
+    width: 50px;
+    height: 50px; 
+}
+
+.illus img {
+    width : 90%;
+}
+
+/* .upload_section {
+  background-color: #D8FFFF;
+} */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description span {
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 19px;
+  margin: 5px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -10px 0px;
+}
+
+.description img {
+  width: 130px;
+  height: 130px;
+  margin: 30px;
+}
+
+.head h3 {
+  color: black;
+}
+
+.drag_area_wrapper {
+  display: flex;
+  margin: 30px;
+  align-items: start;
+  justify-content: center;
+  border-radius: 15px;
+  min-width: 80%;
+  padding: 10px;
+  background-color: rgb(35, 145, 255);
+}
+
+.drag_area {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgb(175, 168, 168);
+  background-color: rgb(60, 120, 256);
+  border-radius: 15px;
+  padding: 20px 50px;
+}
+.upload_area{
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 50px;
+}
+
+.drag_area img {
+  width: 90px;
+  height: 90px;
+}
+
+strong {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.browse_btn {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  padding: 2px 7px;
+  font-size: 12px;
+  margin: 20px 0px 10px 0px;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+
+.browse_btn img {
+  width: 30px;
+  height: auto;
+  margin: 5px;
+}
+
+
+/* teamsection */
+
+.team {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.team img {
+  margin : 10px; 
+}
+.landing_section_team {
+  min-height: 100vh;
+  background-image: url("./Sun-Tornado.svg");
+  background-size: cover;
+  border-radius: 0px 0px 10% 10%;
+}
+
+.avatar_img {
+  width : 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+
+/* prediction_area */
+.info_array h4 {
+  text-shadow: 1px 1px 1px rgb(75, 74, 74), 
+  3px 3px 5px rgb(170, 170, 238); 
+}
+
+.info_array p {
+  text-shadow: 0.5px 1px 1px rgb(44, 4, 4), 
+  3px 3px 5px rgb(225, 225, 238); 
+}
+
+
+.thanks_message {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
