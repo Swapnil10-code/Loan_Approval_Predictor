@@ -5,6 +5,7 @@
     <title>Insurance Predictor</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
@@ -33,18 +34,18 @@
             </nav>
 
             <!-- Front_section -->
-            <div class="row m-3 p-4">
+            <div class="row p-4">
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
                     <div>
                         <img src="{{ url_for('static' , filename='images/rocket.png') }}" class="rocket_img">
                         <br>
-                        <span class="main_text">
+                        <span class="main_text ">
                             Best Prediction for your <br> Financial Future
                         </span>
                         <br>
-                        <span class="small_text text-primary">
+                        <p class="small_text text-start text-primary">
                             We help you take the best Loan
-                        </span>
+                        </p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center illus">
@@ -62,10 +63,10 @@
                     <div>
                         <img src="{{ url_for('static' , filename='images/health-insurance.png')}}">
                     </div>
-                    <div class="head">
+                    <div class="head text-center">
                         <h3>Predict your Loan status</h3>
                     </div>
-                    <span>Magically predicts your loan status in seconds.</span>
+                    <span class="text-center">Magically predicts your loan status in seconds.</span>
                 </div>
                 <div class="form_area">
                     <div>

@@ -5,6 +5,7 @@
     <title>Insurance Predictor</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
 </head>
 
@@ -26,8 +27,8 @@
                 <h6 class="underline back font-italic text-primary text-center"><u>&#60;&#60;&nbsp;Back</u></h6>
             </div>
             
-            <div class="row flex-column m-5 align-items-center">
-                <div class="result mx-5 rounded border border-success w-50">
+            <div class="row flex-column m-5 align-items-center justify-content-center">
+                <div class="result mx-5 rounded border border-success p-2 mx-auto">
                     {% if prediction_data -%}
                     <div class="p-2 bg-success text-center text-light p-3 m-1">
                         <h4>🎊🎊 Congratulations, your loan is approved. 🎊🎊</h4>
