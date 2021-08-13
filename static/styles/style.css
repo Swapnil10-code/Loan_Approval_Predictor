@@ -196,8 +196,7 @@ strong {
   letter-spacing: 0.5px;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width : 320px) {
   .main_text {
     font-size: 35px;
     font-weight: 500;
@@ -215,3 +214,7 @@ strong {
     height: 0px; 
   }
 }
+
+/* @media only screen and (max-width: 480px) {
+  
+} */
