@@ -3,8 +3,8 @@
 
 <head>
     <title>Insurance Predictor</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link text-primary" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-primary" href="/"><u>Home</u> <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/team">Team</a>
@@ -36,7 +36,7 @@
             <div class="row m-3 p-4">
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
                     <div>
-                        <img src="{{ url_for('static' , filename='rocket.png') }}" class="rocket_img">
+                        <img src="{{ url_for('static' , filename='images/rocket.png') }}" class="rocket_img">
                         <br>
                         <span class="main_text">
                             Best Prediction for the <br> Financial Future
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center illus">
                     <div>
-                        <img src="{{ url_for('static' , filename='predict_illustration.svg' ) }}">
+                        <img src="{{ url_for('static' , filename='images/predict_illustration.svg' ) }}">
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="wrapper">
                 <div class="description">
                     <div>
-                        <img src="{{ url_for('static' , filename='health-insurance.png')}}">
+                        <img src="{{ url_for('static' , filename='images/health-insurance.png')}}">
                     </div>
                     <div class="head">
                         <h3>Predict your Loan status</h3>

@@ -3,8 +3,8 @@
 
 <head>
     <title>Loan Predictor - Team</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -24,10 +24,10 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link text-muted" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="/team">Team <span
+                            <a class="nav-link text-primary" href="/team"><u>Team</u> <span
                                     class="sr-only">(current)</span></a>
                         </li>
                     </ul>
@@ -44,28 +44,28 @@
                 <div>
                     <div class="row d-flex align-items-center justify-content-center m-4">
                         <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
-                            <img src="{{ url_for('static' , filename='eeshan_avatar.jpg') }}" class="avatar_img">
+                            <img src="{{ url_for('static' , filename='images/eeshan_avatar.jpg') }}" class="avatar_img">
                             <h4>Eeshan Paul</h4>
                             <span>Jadhavpur University</span>
                             <span> Kolkata (W.B)</span>
                             <span>Machine Learning</span>
                         </div>
                         <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
-                            <img src="{{ url_for('static' , filename='tanish_ava.jpg') }}" class="avatar_img">
+                            <img src="{{ url_for('static' , filename='images/tanish_ava.jpg') }}" class="avatar_img">
                             <h4 class="text-center">Tanish Singh Chouhan</h4>
                             <span>AITR</span>
                             <span>Indore (M.P)</span>
                             <span>Web Development</span>
                         </div>
                         <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
-                            <img src="{{ url_for('static' , filename='swapnil_ava.jpg') }}" class="avatar_img">
+                            <img src="{{ url_for('static' , filename='images/swapnil_ava.jpg') }}" class="avatar_img">
                             <h4>Swapnil Ghatak</h4>
                             <span>Jadhavpur University</span>
                             <span> Kolkata (W.B)</span>
                             <span>Machine Learning</span>
                         </div>
                         <div class="py-4 px-5 col-md-3 col-12 d-flex flex-column align-items-center">
-                            <img src="{{ url_for('static' , filename='tansh_ava.jpg') }}" class="avatar_img" alt="ujjawal">
+                            <img src="{{ url_for('static' , filename='images/default.png') }}" class="avatar_img" alt="ujjawal">
                             <h4>Ujjawal Kumar Jha</h4>
                             <span>Jadhavpur University</span>
                             <span> Kolkata (W.B)</span>

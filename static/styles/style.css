@@ -8,7 +8,7 @@
 
 .main {
   background-color: #D8FFFD;
-  background-image: url("./Sun-Tornado.svg");
+  background-image: url("../images/Sun-Tornado.svg");
   background-size: cover;
 }
 
@@ -169,7 +169,7 @@ strong {
 }
 .landing_section_team {
   min-height: 100vh;
-  background-image: url("./Sun-Tornado.svg");
+  background-image: url("../images/Sun-Tornado.svg");
   background-size: cover;
   border-radius: 0px 0px 10% 10%;
 }

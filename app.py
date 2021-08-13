@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect,send_from_directory
 import pickle
 import numpy as np
 import pandas as pd
@@ -13,13 +13,14 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 
-#default page of our web-app
 @app.route('/', methods=['GET'])
 def upload():
     return render_template('index.html')
 
 
-count = 0
+@app.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/predict', methods=['POST'])
@@ -29,9 +30,7 @@ def predict():
 
     loan_id = request.form.get("loan_id")
     array_temp_2.append(loan_id)
-
-    # array_temp.append(1)  #for loan_id 
-    
+   
     gender = request.form.get("gender")
     array_temp_2.append(gender)
     if(gender == "Female"): 
@@ -97,16 +96,10 @@ def predict():
     else:
         array_temp.append(3) 
 
-    # count = count + 1
     random_num = random.randint(1, 10)
-
-
     print(len(array_temp))
-
     field_array = [ array_temp ]
-
     prediction = model.predict_proba(field_array)
-
     output = 0
 
     if(prediction[0][0] == 1):
@@ -118,10 +111,6 @@ def predict():
         output = 0
 
     return render_template('prediction.html', prediction_data = output , info_array = array_temp_2)
-
-
-    
-
 
 @app.route('/team' , methods=['GET'])
 def team():
